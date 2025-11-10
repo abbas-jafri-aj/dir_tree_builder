@@ -22,8 +22,10 @@ dir_tree_builder is a Python module and CLI tool for recursively building a dire
 
 Clone or download the repository. No pip installation is required:
 
-git clone <repository_url>  
-cd dir_tree_builder  
+```
+git clone https://github.com/abbas-jafri-aj/dir_tree_builder.git
+cd dir_tree_builder
+```
 
 ---
 
@@ -31,9 +33,9 @@ cd dir_tree_builder
 
 ### As a script
 
-python dir_tree_builder.py <path> [--depth N] [--human-readable] [--logfile FILE]  
+python dir_tree_builder.py /home/user/project [--depth N] [--human-readable] [--logfile FILE]
 
-- `path` : Directory or file to inspect  
+- `path` : Directory or file to inspect
 - `--depth N` : Maximum recursion depth (default: 3, -1 for unlimited)  
 - `--human-readable` : Display human-readable sizes and timestamps  
 - `--logfile FILE` : Optional log file path  
@@ -46,30 +48,22 @@ python dir_tree_builder.py "/home/user/project" --depth 2 --human-readable --log
 
 Import and use in your Python code:
 
-from dir_tree_builder import get_dir_tree, dir_tree_to_json  
+```
+from dir_tree_builder import get_dir_tree, dir_tree_to_json
 
-tree = get_dir_tree("/home/user/project", depth=2, human_readable=True)  
-print(dir_tree_to_json(tree))  
+tree = get_dir_tree("/home/user/project", depth=2, human_readable=True)
+print(dir_tree_to_json(tree))
+```
 
 Optional logging can be passed:
 
-import logging  
-from dir_tree_builder import get_dir_tree, setup_logger  
+```
+import logging
+from dir_tree_builder import get_dir_tree, setup_logger
 
-logger = setup_logger("tree.log")  
-tree = get_dir_tree("/home/user/project", depth=2, human_readable=True, logger=logger)  
-
----
-
-## Type Aliases
-
-**FileMetadata**: Dictionary describing a file's properties:  
-
-{"size": 1024, "modified_time": 1678842000}  # size in bytes or human-readable string, modified_time as timestamp or human-readable  
-
-**DirTree**: Nested dictionary representing the directory structure:  
-
-{"README.md": {"size": 512, "modified_time": "2025-11-10 22:30"}, "src": {"main.py": {"size": 2048, "modified_time": "2025-11-10 23:01"}, "utils": {"helpers.py": {"size": 1024, "modified_time": "2025-11-10 22:55"}, "empty_dir": {}}}, "docs": {}}  
+logger = setup_logger("tree.log")
+tree = get_dir_tree("/home/user/project", depth=2, human_readable=True, logger=logger)
+```
 
 ---
 
