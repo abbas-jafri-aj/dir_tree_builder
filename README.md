@@ -45,7 +45,43 @@ python dir_tree_builder.py /home/user/project [--depth N] [--human-readable] [--
 Example:
 
 ```
-python dir_tree_builder.py /home/user/project --depth 2 --human-readable --logfile tree.log  
+$ python dir_tree_builder.py /usr/local --depth 2 --human-readable
+09:54:30 [INFO] Building directory tree for /usr/local (depth=2, human_readable=True)
+{
+    "bin": {
+        "start-systemd": {
+            "size": "3.7 KB",
+            "modified_time": "2023-05-02 18:50"
+        },
+        "update.sh": {
+            "size": "5.1 KB",
+            "modified_time": "2023-05-02 18:50"
+        },
+        "upgrade.sh": {
+            "size": "5.1 KB",
+            "modified_time": "2023-05-02 18:50"
+        },
+        "wslsystemctl": {
+            "size": "284.6 KB",
+            "modified_time": "2023-05-02 18:50"
+        }
+    },
+    "etc": {},
+    "games": {},
+    "include": {},
+    "lib": {},
+    "lib64": {
+        "bpf": {}
+    },
+    "libexec": {},
+    "sbin": {},
+    "share": {
+        "applications": {},
+        "info": {},
+        "man": {}
+    },
+    "src": {}
+}
 ```
 
 ### As a module
