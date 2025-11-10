@@ -45,7 +45,7 @@ python dir_tree_builder.py /home/user/project [--depth N] [--human-readable] [--
 Example:
 
 ```
-python dir_tree_builder.py "/home/user/project" --depth 2 --human-readable --logfile tree.log  
+python dir_tree_builder.py /home/user/project --depth 2 --human-readable --logfile tree.log  
 ```
 
 ### As a module
