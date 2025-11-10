@@ -33,7 +33,9 @@ cd dir_tree_builder
 
 ### As a script
 
+```
 python dir_tree_builder.py /home/user/project [--depth N] [--human-readable] [--logfile FILE]
+```
 
 - `path` : Directory or file to inspect
 - `--depth N` : Maximum recursion depth (default: 3, -1 for unlimited)  
@@ -42,7 +44,9 @@ python dir_tree_builder.py /home/user/project [--depth N] [--human-readable] [--
 
 Example:
 
+```
 python dir_tree_builder.py "/home/user/project" --depth 2 --human-readable --logfile tree.log  
+```
 
 ### As a module
 
