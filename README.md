@@ -6,15 +6,15 @@ dir_tree_builder is a Python module and CLI tool for recursively building a dire
 
 ## Features
 
-- Recursively traverse directories to any depth (or unlimited with -1)  
-- Represent files with metadata (size and last modification time)  
-- Represent directories as nested dictionaries  
-- Include empty directories explicitly  
-- Optionally format sizes and timestamps in human-readable form  
-- Handles permission errors gracefully  
-- Safe to import as a module; logging is optional and configurable  
-- Python 3.8+ compatible  
-- No external dependencies, uses only standard library  
+- Recursively traverse directories to any depth (or unlimited with -1)
+- Represent files with metadata (size and last modification time)
+- Represent directories as nested dictionaries
+- Include empty directories explicitly
+- Optionally format sizes and timestamps in human-readable form
+- Handles permission errors gracefully
+- Safe to import as a module; logging is optional and configurable
+- Python 3.8+ compatible
+- No external dependencies, uses only standard library
 
 ---
 
@@ -38,9 +38,9 @@ python dir_tree_builder.py /home/user/project [--depth N] [--human-readable] [--
 ```
 
 - `path` : Directory or file to inspect
-- `--depth N` : Maximum recursion depth (default: 3, -1 for unlimited)  
-- `--human-readable` : Display human-readable sizes and timestamps  
-- `--logfile FILE` : Optional log file path  
+- `--depth N` : Maximum recursion depth (default: 3, -1 for unlimited)
+- `--human-readable` : Display human-readable sizes and timestamps
+- `--logfile FILE` : Optional log file path
 
 Example:
 
@@ -109,9 +109,9 @@ tree = get_dir_tree("/home/user/project", depth=2, human_readable=True, logger=l
 
 ## Logging
 
-- By default, the module does not output logs when imported.  
-- Use the optional `logger` parameter in `get_dir_tree` or `get_file_info` to enable logging.  
-- When running as a script, use `--logfile` to write logs to a file.  
+- By default, the module does not output logs when imported.
+- Use the optional `logger` parameter in `get_dir_tree` or `get_file_info` to enable logging.
+- When running as a script, use `--logfile` to write logs to a file.
 
 ---
 
